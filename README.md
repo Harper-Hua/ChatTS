@@ -14,4 +14,4 @@ To make sure of the answer quality we use a fixed model type as gpt-4o from Open
 
 ![ChatTS Diagram](https://github.com/Harper-Hua/ChatTS/blob/main/%E2%80%8EchatTS.jpeg)
 
-![Demo Screeshot](https://github.com/Harper-Hua/ChatTS/blob/main/%E2%80%8Edemo1.png)
+![Demo Screeshot](https://github.com/Harper-Hua/ChatTS/blob/main/demo1.png)
