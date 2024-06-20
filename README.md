@@ -12,6 +12,8 @@ Welcome to ChatTS! Here are some tips to get you started:
 
 To make sure of the answer quality we use a fixed model type as gpt-4o from OpenAI. If you are seeing errors about your api quota, visit the OpenAI API usage tier documentation for more information about the rate limits.
 
+## Diagram for ChatTS pipeline
 ![ChatTS Diagram](https://github.com/Harper-Hua/ChatTS/blob/main/%E2%80%8EchatTS.jpeg)
 
+## A demo screenshot for an example question about heart disease
 ![Demo Screeshot](https://github.com/Harper-Hua/ChatTS/blob/main/demo1.png)
