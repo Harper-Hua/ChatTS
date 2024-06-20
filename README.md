@@ -1,3 +1,3 @@
 # ChatTS
 
-![Diagram](ChatTS/chatTS.jpeg)
+![Diagram](chatTS.jpeg)
