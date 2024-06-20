@@ -1,6 +1,8 @@
 # ChatTS
 
-Welcome to ChatTS! Here are some tips to get you started:
+Welcome to ChatTS! Click here to access the [web application](https://singlecellgpt.com/chatTSP?password=chatTSPpass1)
+
+Here are some tips to get you started:
 
 1. Enter your OpenAI API key in the provided field, you only need to type once because the typed key will be fecthed everytime you hit the submit button. But the cached api key will be cleared after you close this window.
 2. Ask your question about the donor's heath condition, demographics, and social history, etc.
