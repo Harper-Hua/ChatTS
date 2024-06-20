@@ -1,3 +1,4 @@
 # ChatTS
 
-![Diagram](chatTS.jpeg)
+![ChatTS Image](https://github.com/your-username/ChatTS/blob/main/chatTS.jpeg)
+
