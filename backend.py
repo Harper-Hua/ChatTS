@@ -5,11 +5,6 @@ import pandas as pd
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import re
 from io import StringIO
-import logging
-import sys
-import time
-import threading
-import openai
 
 # Harper Hua
 
@@ -56,18 +51,6 @@ def create_chat_completion(client, prompt, file_content):
             ], 
         )
 
-        # messages = [
-        #         {"role": "system", "content": "You are a medical information retriever."},
-        #         {"role": "user", "content": f"Here is the donor information: {file_content},"},
-        #         {"role": "user", "content": prompt}
-        #     ]
-        
-        # # print the used prompt token number
-        # prompt_text = "".join(msg["content"] for msg in messages if msg["role"] in ["system", "user"])
-
-        # # Count tokens in the combined prompt
-        # prompt_tokens = count_tokens(prompt_text)
-        # print(f"Token number used: {prompt_tokens}")
         return response.choices[0].message.content.strip()
 
     except Exception as e:
@@ -189,21 +172,21 @@ def ask():
 
     client = create_openai_client(api_key)
 
-    # test if the API key is valid and quota is not exceeded
-    # try:
-    #     response = client.chat.completions.create(
-    #         model="gpt-4o",
-    #         max_tokens=2000,
-    #         messages=[
-    #             {"role": "system", "content": "You are a medical information retriever."},
-    #             {"role": "user", "content": "This is a test question to check if the API key is valid."}
-    #         ], 
-    #     )
-    # except Exception as e:
-    #     return jsonify({'error': str(e)})
-
-    is_valid = check_api_key_validity(api_key)
-    print("API key is valid" if is_valid else "API key is invalid")
+    #test if the API key is valid and quota is not exceeded
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o",
+            max_tokens=2000,
+            messages=[
+                {"role": "system", "content": "You are an AI assistant."},
+                {"role": "user", "content": "This is a test question to check if the API key is valid."}
+            ], 
+        )
+    except Exception as e:
+        return jsonify({'error': str(e)})
+    
+    # is_valid = check_api_key_validity(api_key)
+    # print("API key is valid" if is_valid else "API key is invalid")
 
     try:
         if answer_style == "binary":
