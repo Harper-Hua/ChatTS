@@ -1,6 +1,6 @@
 # ChatTS
 
-Welcome to ChatTS! Click here to access the [web application](https://singlecellgpt.com/chatTSP?password=chatTSPpass1)
+Welcome to ChatTS! Click here to access the [web application](https://singlecellgpt.com/chatTSP?password=chatTS)
 
 Here are some tips to get you started:
 
