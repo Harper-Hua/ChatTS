@@ -4,15 +4,16 @@ Welcome to ChatTS! Click here to access the [web application](https://singlecell
 
 Here are some tips to get you started:
 
-1. Enter your OpenAI API key in the provided field, you only need to type once because the typed key will be fecthed everytime you hit the submit button. But the cached api key will be cleared after you close this window.
-2. Ask your question about the donor's heath condition, demographics, and social history, etc.
-3. Select the answer style: "Data Retriever" for simple answer like 'yes', 'no', or a number; "Chart Review" for more detailed answer with the matches found in the donor's document.
-4. Click "Submit" to get your answer.
-5. Use the "Reset" button to clear the answer table content.
-6. Click "Download Answer" to download the answer as a csv file.
-7. Click the GitHub icon to visit our repo for ChatTS's usage demo and feel free to report bugs you are encountering in the issue section.
+1. To use this application, you'll need an OpenAI API key. To get one, follow [these instructions](https://platform.openai.com/docs/quickstart/account-setup). Becuase we currently only use gpt-4o, you'll need to purchase $5 or more of OpenAI credits. Note: To get an API key, you don't have to write code or install anything.
+2. Enter your OpenAI API key in the provided field (your API key is not saved on the server after you end your session).
+3. Ask your question about the donor's heath condition, demographics, and social history, etc.
+4. Select the answer style: "Data Retriever" for simple answers like 'yes', 'no', or a number; "Chart Review" for more detailed answers and supporting information.
+5. Click "Submit" to get your answer.
+6. Use the "Reset" button to clear the answer table content.
+7. Click "Download Answer" to download the answer as a csv file.
+8. Click the GitHub icon to visit our repo for ChatTS's usage demo and feel free to report bugs, issues, or feature requests.
 
-To make sure of the answer quality we use a fixed model type as gpt-4o from OpenAI. If you are seeing errors about your api quota, visit the OpenAI API usage tier documentation for more information about the rate limits.
+To ensure high-quality answers, we use gpt-4o from OpenAI for all requests. If you are seeing errors about your api quota, visit the [OpenAI API usage tier documentation](https://platform.openai.com/docs/guides/rate-limits/usage-tiers?context=tier-one) for more information about the rate limits.
 
 ## Diagram for ChatTS pipeline
 ![ChatTS Diagram](https://github.com/Harper-Hua/ChatTS/blob/main/%E2%80%8EchatTS.jpeg)
