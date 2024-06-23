@@ -9,7 +9,7 @@ from io import StringIO
 # Harper Hua
 
 app = Flask(__name__)
-PASSWORD = "chatTSPpass1"
+PASSWORD = "chatTS"
 app.secret_key = "super secret key"
 
 def create_openai_client(api_key):
@@ -92,7 +92,7 @@ def create_simplified_answer(client, answer, prompt):
         return "Error: Could not generate response."
 
 def aggregate_donor_health_info(client, prompt, column_name, binary=False):
-    donor_files_directory = '/Users/harper.h/Documents/chatgpt_tabula_sapiens/ChatTabulaSapien/Loop_Agg/subset'
+    donor_files_directory = '/home/ubuntu/chatTSP/row_removed/'
     donor_list = os.listdir(donor_files_directory)
     donor_numberlist = []
     donor_idlist = []
@@ -159,7 +159,7 @@ def check_password():
 
 @app.route('/')
 def home():
-    return render_template('index_test.html')
+    return render_template('index.html')
 
 @app.route('/ask', methods=['POST'])
 def ask():
