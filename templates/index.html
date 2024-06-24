@@ -247,9 +247,10 @@
             const params = new URLSearchParams(window.location.search);
             const password = params.get('password');
             const apiKey = document.getElementById('apiKey').value;
-            const actionUrl = '/ask?password=' + encodeURIComponent(password) + '&apiKey=' + encodeURIComponent(apiKey);
+            const actionUrl = '/ask?password=' + encodeURIComponent(password);
             fetch(actionUrl, {
                 method: 'POST',
+                headers: { 'Authorization': apiKey },
                 body: new FormData(document.getElementById('questionForm'))
             }).then(response => response.json())
             .then(data => {

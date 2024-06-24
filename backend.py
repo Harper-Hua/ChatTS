@@ -165,7 +165,7 @@ def home():
 def ask():
     question = request.form['question']
     answer_style = request.form['answerStyle']
-    api_key = request.form.get('apiKey')
+    api_key = request.headers.get('Authorization')
 
     if not api_key:
         return jsonify({'error': 'API key is required.'})
