@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2XDK2FNF2V"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2XDK2FNF2V');
+    </script>
     <!-- Harper Hua -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -225,18 +234,33 @@
         <button class="github-button" onclick="navigateToGitHub()"><i class="fa-brands fa-github"></i></button>
         <div class="help-content" id="helpContent">
             <button onclick="toggleHelp()">×</button>
-            <h3>Help</h3>
-            <p>Welcome to ChatTS! Here are some tips to get you started:</p>
-            <ul>
-                <li>Enter your OpenAI API key in the provided field, you only need to type once because the typed key will be fecthed everytime you hit the submit button. But the cached api key will be cleared after you close this window.</li>
-                <li>Ask your question about </li>
-                <li>Select the answer style: "Data Retriever" for simple answer like 'yes', 'no', or a number; "Chart Review" for more detailed answer with the matches found in the donor's document.</li>
+            <h1>Help</h1>
+            <h2>ChatTS</h2>
+            <h4>Here are some tips to get you started:</h4>
+            <ol style="padding-left: 20px; margin-left: 0; text-align: left;">
+                <li>To use this application, you'll need an OpenAI API key. To get one, follow <a href="https://platform.openai.com/docs/quickstart/account-setup">these instructions</a>.
+                    <ul style="padding-left: 20px; margin-left: 0; text-align: left;">
+                        <li>Because we currently use only gpt-4o, you'll need to purchase $5 or more of OpenAI credits.</li>
+                        <li>Note: To get an API key, you don't have to write any code or install any software.</li>
+                    </ul>
+                </li>
+                <li>Enter your OpenAI API key in the provided field (your API key is not saved on the server after you end your session).</li>
+                <li>Ask your question about the donor's health condition, demographics, and social history, etc.</li>
+                <li>Select the answer style:</li>
+                    <ul style="padding-left: 20px; margin-left: 0; text-align: left;">
+                        <li><strong>Data Retriever</strong> for simple answers like 'yes', 'no', or a number</li>
+                        <li><strong>Chart Review</strong> for more detailed answers and supporting information.</li>
+                    </ul>
                 <li>Click "Submit" to get your answer.</li>
                 <li>Use the "Reset" button to clear the answer table content.</li>
                 <li>Click "Download Answer" to download the answer as a csv file.</li>
-                <li>Click the GitHub icon to visit our repo for ChatTS's usage demo and feel free to report bugs you are encountering in the issue section.</li>
-                <li>To make sure of the answer quality we use a fixed model type as gpt-4o from OpenAI. If you are seeing errors about your api quota, visit the <a href="https://platform.openai.com/docs/guides/rate-limits/usage-tiers">OpenAI API usage tier documentation</a> for more information about the rate limits.</li>
-            </ul>
+                <li>Click the GitHub icon to visit our repo for ChatTS's usage demo and feel free to report bugs, issues, or feature requests.</li>
+            </ol>
+            <p>To ensure high-quality answers, we use gpt-4o from OpenAI for all requests. If you are seeing errors about your api quota, visit the <a href="https://platform.openai.com/docs/guides/rate-limits/usage-tiers?context=tier-one">OpenAI API usage tier documentation</a> for more information about the rate limits.</p>
+            <h2>Diagram for ChatTS pipeline</h2>
+            <img src="https://github.com/Harper-Hua/ChatTS/blob/main/%E2%80%8EchatTS.jpeg" alt="ChatTS Diagram">
+            <h2>A demo screenshot for an example question about heart disease</h2>
+            <img src="https://github.com/Harper-Hua/ChatTS/blob/main/demo1.png" alt="Demo Screenshot">
         </div>
     </div>
 
