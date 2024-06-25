@@ -5,12 +5,21 @@ import pandas as pd
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import re
 from io import StringIO
+from flask_session import Session
 
 # Harper Hua
 
 app = Flask(__name__)
 PASSWORD = "chatTS"
-app.secret_key = "super secret key"
+app.secret_key = os.getenv('FLASK_SECRET_KEY')
+
+# Ensure that the secret key is set
+if not app.secret_key:
+    raise ValueError("No secret key set for Flask application. Set FLASK_SECRET_KEY environment variable.")
+
+
+app.config['SESSION_TYPE'] = 'filesystem'
+Session(app)
 
 def create_openai_client(api_key):
     return OpenAI(api_key=api_key)
@@ -228,8 +237,8 @@ def ask():
 
 @app.route('/download')
 def download():
-    html_table = session.get('answer_dataframe', 'No data available.')
-    response = make_response(html_table)
+    csv_data = session.get('answer_dataframe', 'No data available.')
+    response = make_response(csv_data)
     response.headers['Content-Type'] = 'application/octet-stream'
     response.headers['Content-Disposition'] = 'attachment; filename=answer.csv'
     return response
