@@ -4,7 +4,7 @@ Welcome to ChatTS! Click here to access the [web application](https://singlecell
 
 Here are some tips to get you started:
 
-1. To use this application, you'll need an OpenAI API key. To get one, follow [these instructions](https://platform.openai.com/docs/quickstart/account-setup).
+1. To use this application, you'll need an OpenAI API key. To get one, create an OpenAI account and go [here](https://platform.openai.com/api-keys) to create an API key.
    - Becuase we currently use only gpt-4o, you'll need to purchase $5 or more of OpenAI credits.
    - Note: To get an API key, you don't have to write any code or install any software.
 4. Enter your OpenAI API key in the provided field (your API key is not saved on the server after you end your session).
